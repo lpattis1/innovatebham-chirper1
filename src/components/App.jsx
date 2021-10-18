@@ -96,6 +96,11 @@ const App = () => {
     );
   });
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b20ceb999329f9ae09509586b35a04a6bbf5a8dc
   return (
     <div className="chirper mb-5">
       <Header account={usernameInput} />
@@ -165,7 +170,11 @@ const App = () => {
           </div>
 
           {sendChirps}
+<<<<<<< HEAD
         
+=======
+   
+>>>>>>> b20ceb999329f9ae09509586b35a04a6bbf5a8dc
         </div>
       </div>
     </div>
