@@ -96,7 +96,7 @@ const App = () => {
     );
   });
 
-  console.log(sendChirps);
+
 
   return (
     <div className="chirper mb-5">
