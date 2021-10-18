@@ -167,27 +167,7 @@ const App = () => {
           </div>
 
           {sendChirps}
-          {/* <Chirp>
-            <div className="left-chirp d-flex justify-content-center align-items-center">
-              <img
-                className="user-pic"
-                src="https://previews.123rf.com/images/rido/rido1204/rido120400047/13283722-happy-smiling-guy-showing-thumb-up-hand-sign-isolated-on-white-background.jpg"
-                alt=""
-              />
-              <div className="user-name mx-3">
-                @Harry <span className="chirped">chirped</span>{" "}
-              </div>
-              <div className="date">
-                <span className="date">(30 seconds ago):</span>
-              </div>
-            </div>
-            <div className="right-chirp mx-4">
-              <div className="user-message">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit est
-                dolorem accusamus? Quis, nemo.
-              </div>
-            </div>
-          </Chirp> */}
+   
         </div>
       </div>
     </div>
