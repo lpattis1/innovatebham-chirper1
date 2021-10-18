@@ -71,22 +71,28 @@ const App = () => {
     userpostRef.current.value = "";
   };
 
+  const removeChirp = (e) => {
+    e.target.parentElement.remove();
+  };
+
   const sendChirps = chirps.map((chirp, index) => {
     return (
-      <Chirp key={index}>
-        <div className="left-chirp d-flex justify-content-center align-items-center">
-          <Userpic imgSrc={chirp.imgSrc} />
-          <Username username={chirp.username} />
-          <div className="date">
-            <span className="date">
-              <Date date={moment().calendar()} />
-            </span>
+      <div className="chrp" onDoubleClick={removeChirp}>
+        <Chirp key={index}>
+          <div className="left-chirp d-flex justify-content-center align-items-center">
+            <Userpic imgSrc={chirp.imgSrc} />
+            <Username username={chirp.username} />
+            <div className="date">
+              <span className="date">
+                <Date date={moment().calendar()} />
+              </span>
+            </div>
           </div>
-        </div>
-        <div className="right-chirp mx-4">
-          <Post post={chirp.post} />
-        </div>
-      </Chirp>
+          <div className="right-chirp mx-4">
+            <Post post={chirp.post} />
+          </div>
+        </Chirp>
+      </div>
     );
   });
 
