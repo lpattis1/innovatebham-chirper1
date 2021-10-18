@@ -17,6 +17,10 @@ body {
   border-bottom-right-radius: 0.5rem;
 }
 
+.chirp {
+  cursor: pointer;
+}
+
 .chirper-body {
   width: 100%;
 }
