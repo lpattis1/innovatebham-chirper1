@@ -87,7 +87,7 @@ const App = () => {
             <Userpic imgSrc={chirp.imgSrc} />
             <Username username={chirp.username} />
             <div className="date d-flex flex-column justify-content-center align-items-center">
-              <small className="date mb-3 mt-3">{chirp.date}</small>
+              <small className="date mb-3 mt-3 text-white">{chirp.date}</small>
             </div>
           </div>
           <div className="right-chirp mx-4">
