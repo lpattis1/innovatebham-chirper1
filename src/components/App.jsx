@@ -5,7 +5,7 @@ import Post from "./Post";
 import Username from "./Username";
 import Userpic from "./Userpic";
 import moment from "moment";
-import Date from "./Date";
+
 import { BsFillPersonFill } from "react-icons/bs";
 import { BsChatTextFill } from "react-icons/bs";
 import { BsFillEmojiLaughingFill } from "react-icons/bs";
@@ -26,6 +26,7 @@ const App = () => {
         "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/streams/2012/February/120224/88019-femshep.jpg",
       username: "Commander_Shepard",
       post: "I'm Commander Shepard and this is my favorite chirp on the Citadel.",
+      date: moment().format("MMMM Do YYYY, h:mm:ss a"),
     },
 
     {
@@ -33,6 +34,7 @@ const App = () => {
         "https://pbs.twimg.com/profile_images/2988806606/27dc8198814905ae7500745bfcf035ca.jpeg",
       username: "Liara_Tsoni",
       post: "By ThE gOdDeSs! 🗣",
+      date: moment().format("MMMM Do YYYY, h:mm:ss a"),
     },
 
     {
@@ -40,6 +42,7 @@ const App = () => {
         "https://www.giantbomb.com/a/uploads/scale_medium/2/25628/2431870-2431810-me3_garrus_normandy.png",
       username: "Garrus_Vakarian",
       post: "Can this chirp wait a bit? I'm in the middle of some calibrations...",
+      date: moment().format("MMMM Do YYYY, h:mm:ss a"),
     },
   ]);
 
@@ -60,6 +63,7 @@ const App = () => {
       imgSrc: userimageInput,
       username: usernameInput,
       post: userpostInput,
+      date: moment().format("MMMM Do YYYY, h:mm:ss a"),
     };
 
     setChirps([...chirps, addedChirp]);
@@ -82,10 +86,8 @@ const App = () => {
           <div className="left-chirp d-flex justify-content-center align-items-center">
             <Userpic imgSrc={chirp.imgSrc} />
             <Username username={chirp.username} />
-            <div className="date">
-              <span className="date">
-                <Date date={moment().calendar()} />
-              </span>
+            <div className="date d-flex flex-column justify-content-center align-items-center">
+              <small className="date mb-3 mt-3">{chirp.date}</small>
             </div>
           </div>
           <div className="right-chirp mx-4">
@@ -95,6 +97,8 @@ const App = () => {
       </div>
     );
   });
+
+  console.log(chirps);
 
   return (
     <div className="chirper mb-5">
